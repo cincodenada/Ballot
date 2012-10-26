@@ -1,7 +1,7 @@
 task :deploy do
   sh "bundle exec rake spec"
   sh "git checkout -B compiled"
-  sh "git merge -s recursive -Xtheirs master"
+  sh "git merge -s recursive -Xtheirs heroku"
   sh 'bundle exec rake assets:clean'
   sh 'bundle exec rake i18n:js:export'
   sh 'bundle exec rake assets:precompile'
