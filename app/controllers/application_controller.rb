@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  has_mobile_fu
   protect_from_forgery
  unless Rails.application.config.consider_all_requests_local
     rescue_from Exception, with: :render_404
